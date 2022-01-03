@@ -42,10 +42,7 @@ if op1=="CEP":
     cep_input=st.text_input("Digite o CEP para consulta: ")
     cep=requests.get("https://cep.awesomeapi.com.br/json/{}".format(cep_input))
     cep=cep.json()
-    #cep_rua=cep['adress']
-    #cep_state=cep['state']
-    #cep_district=cep['district']
-    #cep_city=cep['city']
+   
 
     if len(cep_input) != 8:
         st.write("Quantidade de digitos invalida")
